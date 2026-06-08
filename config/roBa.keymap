@@ -21,6 +21,7 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
+
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -58,15 +59,6 @@
     };
 
     macros {
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
-
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -84,14 +76,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
     };
 
     keymap {
@@ -107,7 +91,7 @@
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
 
-        };            #sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+        };
 
         FUNCTION {
             bindings = <
