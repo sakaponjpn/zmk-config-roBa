@@ -95,7 +95,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y      &kp U  &lt 6 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F             &kp G        &kp LS(LG(S))         &kp MINUS      &kp H      &kp J  &kp K      &kp L    &mt RCTRL DEL
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &lt 4 B      &kp COLON             &to 3          &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT TAB
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &to 5                 &to 3          &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT TAB
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 LANGUAGE_2  &lt 1 SPACE  &lt 2 LANGUAGE_1      &kp BACKSPACE  &kp ENTER                             &kp ESC
             >;
 
@@ -133,7 +133,7 @@
             >;
         };
 
-        layer_6 {
+        bluetooth {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
