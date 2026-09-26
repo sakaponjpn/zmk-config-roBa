@@ -104,10 +104,10 @@
 
         NUM {
             bindings = <
-&none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                             &none   &none           &kp UP_ARROW    &none            &trans
-&none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp HOME  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp END   &none   &none           &none           &none            &trans
-&trans  &kp KP_NUMBER_0  &trans           &trans           &trans        &trans                       &trans    &trans                                                   &trans
+&kp MINUS     &kp N7  &kp N8  &kp N9  &kp PLUS                                             &none   &none           &kp UP_ARROW    &none            &trans
+&kp SLASH     &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp HOME  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp NUMBER_0  &kp N1  &kp N2  &kp N3  &kp PERIOD    &kp EQUAL                    &kp END   &none   &none           &none           &none            &trans
+&trans        &trans  &trans  &trans  &trans        &trans                       &trans    &trans                                                   &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
