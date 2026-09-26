@@ -46,14 +46,19 @@
             key-positions = <11 10>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
+        esc {
+            bindings = <&kp ESC>;
             key-positions = <20 21>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
+        ins {
+            bindings = <&kp INSERT>;
+            key-positions = <18 19>;
+        };
+
+        printscreen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <19 20>;
         };
     };
 
@@ -94,7 +99,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y      &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &kp LS(LG(S))         &kp MINUS      &kp H      &kp J  &kp K      &kp L    &mt RCTRL DEL
+&kp A             &kp S         &kp D         &kp F             &kp G        &kp LS(LG(S))         &kp TAB        &kp H      &kp J  &kp K      &kp L    &mt RCTRL DEL
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &to 3                 &to 4          &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT TAB
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 1 SPACE  &lt 2 LANGUAGE_1      &kp BACKSPACE  &kp ENTER                             &kp ESC
             >;
@@ -126,10 +131,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans      &trans   &trans                          &trans
+&trans          &kp F7  &kp F8  &kp F9  &kp F10                                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans          &kp F4  &kp F5  &kp F6  &kp F11  &trans       &kp F13          &kp F6  &kp F7  &kp F8  &kp F9  &trans
+&kp LEFT_SHIFT  &kp F1  &kp F2  &kp F3  &kp F12  &kp INS      &kp PRINTSCREEN  &trans  &trans  &trans  &trans  &kp RIGHT_SHIFT
+&trans          &trans  &trans  &trans  &trans   &trans       &trans           &trans                          &trans
             >;
         };
 
