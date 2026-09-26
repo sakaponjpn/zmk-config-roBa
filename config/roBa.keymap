@@ -93,31 +93,24 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                               &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F             &kp G        &kp LS(LG(S))         &kp MINUS        &kp H        &kp J  &kp K      &kp L    &mt RCTRL DEL
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &lt 6 B      &kp COLON             &kp SEMICOLON    &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT TAB
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 2 SPACE  &lt 1 LANGUAGE_1      &lt 2 BACKSPACE  &lt 3 ENTER                             &kp ESC
+&kp Q             &kp W         &kp E         &kp R             &kp T                                             &kp Y      &kp U  &lt 6 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F             &kp G        &kp LS(LG(S))         &kp MINUS      &kp H      &kp J  &kp K      &kp L    &mt RCTRL DEL
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &lt 4 B      &kp COLON             &to 3          &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT TAB
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 LANGUAGE_2  &lt 1 SPACE  &lt 2 LANGUAGE_1      &kp BACKSPACE  &kp ENTER                             &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        FUNCTION {
-            bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F10                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &trans      &trans   &trans                          &trans
-            >;
-        };
-
         NUM {
             bindings = <
-&none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                             &none          &none           &kp UP_ARROW    &none            &trans
-&none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp HOME  &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp END   &kp PAGE_DOWN  &none           &none           &none            &trans
-&trans  &kp KP_NUMBER_0  &trans           &trans           &trans        &trans                       &trans    &trans                                                          &trans
+&none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                             &none   &none           &kp UP_ARROW    &none            &trans
+&none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp HOME  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp END   &none   &none           &none           &none            &trans
+&trans  &kp KP_NUMBER_0  &trans           &trans           &trans        &trans                       &trans    &trans                                                   &trans
             >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         kigou {
@@ -140,21 +133,30 @@
             >;
         };
 
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+            >;
+        };
+
+        FUNCTION {
+            bindings = <
+&trans  &kp F7  &kp F8  &kp F9  &kp F10                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans      &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans      &trans   &trans                          &trans
+            >;
+        };
+
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
